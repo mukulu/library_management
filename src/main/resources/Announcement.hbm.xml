@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+  "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+  "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="library.model.Announcement" table="announcements">
+        <id name="announcementId" column="announcement_id">
+            <generator class="increment"/>
+        </id>
+
+        <property name="title" not-null="true" unique="true"/>
+        <property name="body"/>
+        <property name="datePosted" type="date" column="datePosted"/>
+        <many-to-one name="author" column="author" class="library.model.User"/>
+    </class>
+    
+</hibernate-mapping>
