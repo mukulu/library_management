@@ -6,10 +6,10 @@
 	
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>no.uio.inf5750</groupId>
-  <artifactId>example-hibernate</artifactId>
+  <groupId>library</groupId>
+  <artifactId>library-management</artifactId>
   <version>1.0</version>
-  <name>Example Project Hibernate</name>
+  <name>Project management</name>
 
   <dependencies>
 		

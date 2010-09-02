@@ -11,13 +11,18 @@ public class UserClient {
 		userDAO = new HibernateUserDAO();
 	}
 	public static void main(String[] args) {
-		getUser(2);
-		//addUser("another","joke","ofmine","hellyeah","simpleenough","gantochodu@gantosemail.com");
+		//getUser(2);
+		addUser("another","joke","ofmine","hellyeah","simpleenough","gantochodu@gantosemail.com");
 	}
 	
 	private static void getUser(int userId) {
 		User user = userDAO.getUser(userId);
-		System.out.println("Username:" + user.getUsername() + "Firstname:" + user.getFirstName() + "Lastname:" + user.getLastName());
+		if(user != null ) {
+			System.out.println("Username:" + user.getUsername() + "Firstname:" + user.getFirstName() + "Lastname:" + user.getLastName());
+		}
+		else {
+			System.out.println("No match found");
+		}
 	}
 	private static void addUser(String username, String firstName, String lastName) {
 		User user = new User();
@@ -42,7 +47,7 @@ public class UserClient {
 		user.setEmail(email);
 		int id = userDAO.saveUser(user);
 		if( id != 0 ) {
-			System.out.println("User "+ username + "Added successfully");
+			System.out.println("User "+ username + " Added successfully");
 		}
 		else {
 			System.out.println("User couldnot be added");
