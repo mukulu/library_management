@@ -1,0 +1,9 @@
+Library management application
+Written in Java.
+
+Frameworks:
+- Hibernate (ORM)
+- Jakatra Struts (Web Framework)
+- Maven (Project management)
+- Spring (AOP)
+- Velocity (Template Engine)
