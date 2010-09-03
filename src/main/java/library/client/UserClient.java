@@ -12,7 +12,7 @@ public class UserClient {
 	}
 	public static void main(String[] args) {
 		//getUser(2);
-		addUser("another","joke","ofmine","hellyeah","simpleenough","gantochodu@gantosemail.com");
+		addUser("auson","nosua","Auson","Rugonzigwa","Kisanga","ausonkisanga@gmail.com");
 	}
 	
 	private static void getUser(int userId) {
